@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# React Hook Form + Zod Example
 
-## Getting Started
+A comprehensive example project demonstrating how to use [React Hook Form](https://react-hook-form.com/) with [Zod](https://zod.dev/) for form validation in a Next.js application.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Form Validation**: Robust validation using Zod schemas
+- **User Registration**: Email, name, and password registration with localStorage persistence
+- **Notes Management**: Add, delete, and manage items with name, quantity, and price
+- **TypeScript**: Full TypeScript support with inferred types from Zod schemas
+- **Code Quality**: Prettier formatting and ESLint configuration
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── page.tsx              # Homepage with navigation
+│   ├── register/
+│   │   └── page.tsx          # User registration form
+|   |   └── schema.ts         # Zod validation schemas
+│   ├── notes/
+│   │   ├── page.tsx          # Notes management page
+│   │   ├── schema.ts         # Zod validation schemas
+│   │   └── useNotes.ts       # Custom hook for notes functionality
+│   └── utils/
+│       └── number.ts         # Number parsing utilities
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Next.js 15](https://nextjs.org/) - React framework
+- [React Hook Form](https://react-hook-form.com/) - Form state management
+- [Zod](https://zod.dev/) - Schema validation
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Prettier](https://prettier.io/) - Code formatting
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏃‍♂️ Getting Started
 
-## Learn More
+1. **Clone the repository**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone <repository-url>
+   cd example-zod-with-react-hook-form
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Run the development server**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Formatting
+
+```bash
+# Format all files
+npm run format
+
+# Check formatting without changes
+npm run format:check
+```
+
+### Linting
+
+```bash
+npm run lint
+```
+
+## 📚 Learning Resources
+
+This project serves as a practical example for:
+
+- **React Hook Form**: Form state management and validation
+- **Zod**: Schema validation and type inference
+- **Custom Hooks**: Reusable state management patterns
+- **TypeScript**: Type safety with form data
+- **Next.js App Router**: File-based routing and layouts
+
+## 🤝 Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Note**: This is an example project created for educational purposes. The registration form saves data to localStorage for demonstration - in a real application, you would implement proper backend authentication and data persistence.
