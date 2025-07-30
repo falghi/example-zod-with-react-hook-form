@@ -5,7 +5,6 @@ A comprehensive example project demonstrating how to use [React Hook Form](https
 ## 🚀 Features
 
 - **Form Validation**: Robust validation using Zod schemas
-- **User Registration**: Email, name, and password registration with localStorage persistence
 - **Notes Management**: Add, delete, and manage items with name, quantity, and price
 - **TypeScript**: Full TypeScript support with inferred types from Zod schemas
 - **Code Quality**: Prettier formatting and ESLint configuration
@@ -92,4 +91,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Note**: This is an example project created for educational purposes. The registration form saves data to localStorage for demonstration - in a real application, you would implement proper backend authentication and data persistence.
+**Note**: This is an example project created for educational purposes. The notes page saves data to localStorage for demonstration - in a real application, you would implement proper backend authentication and data persistence.
