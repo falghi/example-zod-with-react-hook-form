@@ -20,15 +20,6 @@ export default function Home() {
                 Go to Notes Page
               </Link>
             </div>
-            <div style={{ marginTop: "1rem" }}>
-              <Link
-                href="/register"
-                className={styles.submitButton}
-                style={{ textDecoration: "none", display: "inline-block" }}
-              >
-                Go to Register Page
-              </Link>
-            </div>
           </div>
         </div>
       </main>

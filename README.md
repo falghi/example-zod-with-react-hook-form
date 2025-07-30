@@ -16,9 +16,6 @@ A comprehensive example project demonstrating how to use [React Hook Form](https
 src/
 ├── app/
 │   ├── page.tsx              # Homepage with navigation
-│   ├── register/
-│   │   └── page.tsx          # User registration form
-|   |   └── schema.ts         # Zod validation schemas
 │   ├── notes/
 │   │   ├── page.tsx          # Notes management page
 │   │   ├── schema.ts         # Zod validation schemas
