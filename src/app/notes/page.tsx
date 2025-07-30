@@ -62,12 +62,12 @@ export default function Notes() {
             </div>
 
             <div className={styles.formGroup}>
-              <label htmlFor="price">Price (JPY):</label>
+              <label htmlFor="price">Price:</label>
               <input
                 id="price"
                 type="text"
                 {...register("price")}
-                placeholder="Enter price (JPY)"
+                placeholder="Enter price"
                 className={errors.price ? styles.error : ""}
               />
               {errors.price && (
@@ -141,13 +141,13 @@ export default function Notes() {
                       background: "white",
                     }}
                   >
-                    <div>
+                    <div style={{ marginRight: "0.5rem" }}>
                       <h3 style={{ margin: "0 0 0.5rem 0", color: "black" }}>
                         {item.name}
                       </h3>
                       <p style={{ margin: "0", color: "#666" }}>
-                        Quantity: {item.quantity} | Price: JPY
-                        {numberWithDelimiter(item.price)} | Total: JPY
+                        Quantity: {item.quantity} | Price:{" "}
+                        {numberWithDelimiter(item.price)} | Total:{" "}
                         {numberWithDelimiter(item.price * item.quantity)}
                       </p>
                     </div>
@@ -178,7 +178,7 @@ export default function Notes() {
                     fontSize: "1.1rem",
                   }}
                 >
-                  Total Value: JPY {numberWithDelimiter(totalValue)}
+                  Total Value: {numberWithDelimiter(totalValue)}
                 </div>
               </div>
             )}
@@ -190,7 +190,7 @@ export default function Notes() {
               className={styles.submitButton}
               style={{ textDecoration: "none", display: "inline-block" }}
             >
-              Back to Registration
+              Back to Homepage
             </Link>
           </div>
         </div>

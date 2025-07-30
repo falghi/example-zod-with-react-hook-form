@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { itemSchema, type ItemData } from "./schema";
-import { parseInteger } from "@/utils/number";
+import { parseNumber } from "@/utils/number";
 
 interface Item {
   id: string;
@@ -50,17 +50,13 @@ export function useNotes() {
       id: Date.now().toString(),
       name: data.name,
       quantity: data.quantity,
-      price: parseInteger(data.price),
+      price: parseNumber(data.price),
       createdAt: new Date().toISOString(),
     };
 
     const updatedItems = [...items, newItem];
     setItems(updatedItems);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedItems));
-
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 500));
-    console.log("Item added:", newItem);
     reset();
   };
 
