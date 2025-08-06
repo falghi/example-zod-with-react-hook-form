@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { itemSchema, type ItemData } from "./schema";
-import { parseNumber } from "@/utils/number";
+import { parseInteger } from "@/utils/number";
 
 interface Item {
   id: string;
@@ -50,7 +50,7 @@ export function useNotes() {
       id: Date.now().toString(),
       name: data.name,
       quantity: data.quantity,
-      price: parseNumber(data.price),
+      price: parseInteger(data.price),
       createdAt: new Date().toISOString(),
     };
 

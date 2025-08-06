@@ -25,3 +25,16 @@ export const parseNumber = (value: string): number => {
     );
   return Number(cleanedValue);
 };
+
+/**
+ * Parses a string value into an integer by removing thousands separators, handling
+ * both half-width and full-width characters, and removing the decimal part.
+ *
+ * @param value - The string value to parse. It can contain half-width or full-width characters
+ *                for digits, commas, dot characters, and minus signs.
+ * @returns The parsed integer.
+ */
+export const parseInteger = (value: string): number => {
+  const parsedNumber = parseNumber(value);
+  return Math.trunc(parsedNumber);
+};

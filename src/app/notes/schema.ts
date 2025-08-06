@@ -1,4 +1,4 @@
-import { parseNumber } from "@/utils/number";
+import { parseInteger } from "@/utils/number";
 import { z } from "zod";
 
 const numberRegex = /^[－-]?(?:[０-９\d][,，０-９\d]*(?:[．\.][\d０-９]+)?)?$/;
@@ -8,10 +8,10 @@ const isNumber = z
   .refine(value => numberRegex.test(value), {
     message: "Invalid number",
   })
-  .refine(value => parseNumber(value) >= -2000000000, {
+  .refine(value => parseInteger(value) >= -2000000000, {
     message: "Number must be greater than or equal to -2000000000",
   })
-  .refine(value => parseNumber(value) <= 2000000000, {
+  .refine(value => parseInteger(value) <= 2000000000, {
     message: "Number must be less than or equal to 2000000000",
   });
 
