@@ -21,7 +21,7 @@ export const parseNumber = (value: string): number => {
     .replace(/．/g, ".")
     .replace(/[ー−‒–—―﹣－]/g, "-")
     .replace(/[０-９]/g, digit =>
-      String.fromCharCode(digit.charCodeAt(0) - 0xfee0)
+      String.fromCharCode(digit.charCodeAt(0) - "０".charCodeAt(0))
     );
   return Number(cleanedValue);
 };
