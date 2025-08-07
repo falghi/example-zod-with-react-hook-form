@@ -19,7 +19,7 @@ export const parseNumber = (value: string): number => {
   const cleanedValue = value
     .replace(/[,，]/g, "")
     .replace(/．/g, ".")
-    .replace(/[－−‒–—―﹣－]/g, "-")
+    .replace(/[ー－−‒–—―﹣－]/g, "-")
     .replace(/[０-９]/g, digit =>
       String.fromCharCode(digit.charCodeAt(0) - 0xfee0)
     );
