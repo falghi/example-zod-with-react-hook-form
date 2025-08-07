@@ -2,7 +2,7 @@ import { parseInteger } from "@/utils/number";
 import { z } from "zod";
 
 const numberRegex =
-  /^[ー−‒–—―﹣－-]?(?:[０-９\d][,，０-９\d]*(?:[．\.][\d０-９]+)?)?$/;
+  /^[ー−‒–—―﹣－-]?(?:[０-９\d][,，０-９\d]*(?:[．\.][０-９\d]+)?)?$/;
 
 const isNumber = z
   .string()
