@@ -1,7 +1,8 @@
 import { parseInteger } from "@/utils/number";
 import { z } from "zod";
 
-const numberRegex = /^[－-]?(?:[０-９\d][,，０-９\d]*(?:[．\.][\d０-９]+)?)?$/;
+const numberRegex =
+  /^[－−‒–—―﹣－-]?(?:[０-９\d][,，０-９\d]*(?:[．\.][\d０-９]+)?)?$/;
 
 const isNumber = z
   .string()
